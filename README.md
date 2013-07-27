@@ -1,11 +1,13 @@
 miatanto
 ========
-
 crap utility for awesome 3.5
+
 ---
+
 
 eclipsemc.lua
 -
+
 Simple vicious widget for [Eclipse Mining Consortium](https://eclipsemc.com/) user information.
 The widget uses the API offered by EclipseMC to live show account status and workers data.
 
@@ -23,26 +25,29 @@ profit
 **Config**
 
 register standard vicious widget, the only parameter to specify is the API key provided by EclipseMC
-es: vicious.register(eclipse, vicious.widgets.eclipsemc, "CR:${CR} UR:${UR} ER:${ER} TP:${TP} BF:${BF}", 5, APIKEY )
+
+> es: vicious.register(eclipse, vicious.widgets.eclipsemc, "CR:${CR} UR:${UR} ER:${ER} TP:${TP} BF:${BF}", 5, APIKEY )
 
 you can use this general account info format:
 
->"{CR}": confirmed reward
->"{UR}": unconfirmed reward
->"{ER}": estimated reward
->"{TP}": total payout
->"{BF}": blocks found
+> "{CR}": confirmed reward
+> "{UR}": unconfirmed reward
+> "{ER}": estimated reward
+> "{TP}": total payout
+> "{BF}": blocks found
 
 for the details relating to worker (substitute *workername* with existing worker name):
 
->"{workername.hash_rate}":       hash rate
->"{workername.round_shares}":    round shares
->"{workername.reset_shares}":    reset shares
->"{workername.total_shares}":    total shares
->"{workername.last_activity}":   last activity
+> "{workername.hash_rate}":       hash rate
+> "{workername.round_shares}":    round shares
+> "{workername.reset_shares}":    reset shares
+> "{workername.total_shares}":    total shares
+> "{workername.last_activity}":   last activity
 
 es: i want confirmed reward, total payout, and hash rate of my worker named *Giorgio*
+
     vicious.register(eclipse, vicious.widgets.eclipsemc, "confimed: ${CR} payout: ${TP} Giorgio hashrate: ${Giorgio.hash_rate}", 3, APIKEY )
+
 simple.
 
 
