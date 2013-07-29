@@ -71,12 +71,12 @@ profit
 
 start bfgminer with the API interface enabled
 
-> es: bfgminer --api-listen --api-network
-> or add 
-> "api-listen" : true,
-> "api-port" : "4028",
-> "api-network": true
-> to ~/.bfgminer/bfgminer.conf
+>    es: bfgminer --api-listen --api-network
+>    or add 
+>    "api-listen" : true,
+>    "api-port" : "4028",
+>    "api-network": true
+>    to ~/.bfgminer/bfgminer.conf
 
 
 register standard vicious widget, pass a table with host,port 
@@ -85,26 +85,26 @@ register standard vicious widget, pass a table with host,port
 
 you can use this format string:
 
-> {"Elapsed"}
-> {"MHS av"}
-> {"Found Blocks"}
-> {"Getworks"}
-> {"Accepted"}
-> {"Rejected"}
-> {"Hardware Errors"}
-> {"Utility"}
-> {"Discarded"}
-> {"Stale"}
-> {"Get Failures"}
-> {"Local Work"}
-> {"Remote Failures"}
-> {"Network Blocks"}
-> {"Total MH"}
-> {"Work Utility"}
-> {"Difficulty Accepted"}
-> {"Difficulty Rejected"}
-> {"Difficulty Stale"}
-> {"Best Share"}
+>	${Elapsed}
+>	${MHS av}
+>	${Found Blocks}
+>	${Getworks}
+>	${Accepted}
+>	${Rejected}
+>	${Hardware Errors}
+>	${Utility}
+>	${Discarded}
+>	${Stale}
+>	${Get Failures}
+>	${Local Work}
+>	${Remote Failures}
+>	${Network Blocks}
+>	${Total MH}
+>	${Work Utility}
+>	${Difficulty Accepted}
+>	${Difficulty Rejected}
+>	${Difficulty Stale}
+>	${Best Share}
 
 the variable name is self-explanatory on the content
 
