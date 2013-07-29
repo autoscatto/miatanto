@@ -1,4 +1,4 @@
-miatanto
+Miatanto Awesome
 ========
 crap utility for awesome 3.5
 
@@ -51,7 +51,62 @@ es: i want confirmed reward, total payout, and hash rate of my worker named *Gio
 simple.
 
 
+bfgminer.lua
+-
 
+Simple vicious widget for [BFGminer](https://github.com/luke-jr/bfgminer) API interface.
+
+
+**Install**
+
+```sh
+git clone https://github.com/autoscatto/miatanto.git
+cp bfgminer.lua $viciuswidgetsdir [mine is in ~/.config/awesome/vicious/widgets]
+luarocks install luasocket
+luarocks install luajson (or install lua-json and lua-socket with your distro packet manager)
+profit
+```
+
+**Config**
+
+start bfgminer with the API interface enabled
+
+> es: bfgminer --api-listen --api-network
+> or add 
+> "api-listen" : true,
+> "api-port" : "4028",
+> "api-network": true
+> to ~/.bfgminer/bfgminer.conf
+
+
+register standard vicious widget, pass a table with host,port 
+
+> es: vicious.register(bfgminer, vicious.widgets.bfgminer, "MH/s: ${MHS av} Accepted: ${Accepted} Best Share: ${Best Share}", 3, {"127.0.0.1",4028} )
+
+you can use this format string:
+
+> {"Elapsed"}
+> {"MHS av"}
+> {"Found Blocks"}
+> {"Getworks"}
+> {"Accepted"}
+> {"Rejected"}
+> {"Hardware Errors"}
+> {"Utility"}
+> {"Discarded"}
+> {"Stale"}
+> {"Get Failures"}
+> {"Local Work"}
+> {"Remote Failures"}
+> {"Network Blocks"}
+> {"Total MH"}
+> {"Work Utility"}
+> {"Difficulty Accepted"}
+> {"Difficulty Rejected"}
+> {"Difficulty Stale"}
+> {"Best Share"}
+
+the variable name is self-explanatory on the content
 
 
 License
